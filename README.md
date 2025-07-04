@@ -41,6 +41,7 @@ O projeto segue uma estrutura de monorepo, com o frontend e o backend em diretó
 |   |   |-- context/
 |   |   |-- pages/
 |   |-- package.json
+|   |-- eslint.config.js
 |
 |-- server/         # Aplicação backend (Node.js/TypeScript)
 |   |-- prisma/
@@ -50,8 +51,10 @@ O projeto segue uma estrutura de monorepo, com o frontend e o backend em diretó
 |   |   |-- repositories/
 |   |   |-- services/
 |   |-- package.json
+|   |-- eslint.config.js
 |   |-- tsconfig.json
 |
+|-- prettierrc.js
 |-- .gitignore
 |-- package.json      # Scripts para rodar ambos os projetos
 |-- README.md
@@ -63,15 +66,15 @@ A API expõe os seguintes endpoints:
 
 | Rota            | Método | Descrição                                                                                    | Protegida |
 | :-------------- | :----- | :------------------------------------------------------------------------------------------- | :-------- |
-| `/api/register` | `POST` | [cite\_start]Registra um novo usuário com nome, e-mail e senha. [cite: 7]                    | Não       |
-| `/api/login`    | `POST` | [cite\_start]Autentica um usuário existente com e-mail e senha, retornando um JWT. [cite: 7] | Não       |
-| `/api/profile`  | `GET`  | [cite\_start]Retorna os dados do usuário autenticado. [cite: 7]                              | Sim       |
+| `/api/register` | `POST` | Registra um novo usuário com nome, e-mail e senha.                    | Não       |
+| `/api/login`    | `POST` | Autentica um usuário existente com e-mail e senha, retornando um JWT. | Não       |
+| `/api/profile`  | `GET`  | Retorna os dados do usuário autenticado.                              | Sim       |
 
 ### 5\. Decisões de Arquitetura e Design
 
 - **Arquitetura do Backend**: A estrutura do backend segue uma arquitetura em camadas (Controllers → Services → Repositories) para promover a separação de interesses e facilitar a manutenção. 
 - **Armazenamento do Token**: O JWT é armazenado no `localStorage` do navegador.  Esta abordagem foi escolhida pela simplicidade de implementação no frontend.
-  - **Riscos**: É importante notar que o armazenamento em `localStorage` torna o token vulnerável a ataques de Cross-Site Scripting (XSS). Em uma aplicação de produção, uma alternativa mais segura como cookies `HttpOnly` seria recomendada para mitigar esse risco. 
+- **Riscos**: É importante notar que o armazenamento em `localStorage` torna o token vulnerável a ataques de Cross-Site Scripting (XSS). Em uma aplicação de produção, uma alternativa mais segura como cookies `HttpOnly` seria recomendada para mitigar esse risco. 
 - **Rotas Privadas**: O frontend utiliza um componente `PrivateRoute` que verifica a existência do token de autenticação antes de renderizar rotas protegidas, como o `Dashboard`, garantindo que apenas usuários logados possam acessá-las. 
 
 ### 6\. Como Executar o Projeto
