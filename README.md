@@ -46,6 +46,7 @@ O projeto segue uma estrutura de monorepo, com o frontend e o backend em diretó
 |-- server/         # Aplicação backend (Node.js/TypeScript)
 |   |-- prisma/
 |   |-- src/
+|   |   |-- __tests__/
 |   |   |-- controllers/
 |   |   |-- middlewares/
 |   |   |-- repositories/
