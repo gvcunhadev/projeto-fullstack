@@ -1,0 +1,23 @@
+# Ignorar as pastas node_modules de ambos os projetos
+client/node_modules/
+server/node_modules/
+
+# Ignorar arquivos de ambiente sensíveis (em qualquer nível)
+.env
+client/.env
+server/.env
+
+# Ignorar logs e outros arquivos de cache/build
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# Ignorar pastas de build/compilação do frontend e backend
+client/dist/    # A pasta de build do Vite
+server/dist/    # A pasta de build do TypeScript para o backend
+
+# Arquivos Docker gerados localmente (se houver)
+docker-compose.override.yml # Se você usar para configs de dev
