@@ -59,7 +59,7 @@ const Register = () => {
     <div className="flex items-center justify-center h-screen">
       <form
         onSubmit={handleSubmit}
-        className="p-8 bg-white rounded shadow-md w-96"
+        className="p-8 bg-white rounded-md shadow-md w-96"
       >
         <h2 className="text-2xl font-bold mb-6 text-center">Registrar</h2>
         {}
@@ -82,6 +82,7 @@ const Register = () => {
             onChange={(e) => setFullName(e.target.value)}
             className="w-full px-3 py-2 border rounded"
             required
+             placeholder="Gabriela Dos Santos"
           />
         </div>
         <div className="mb-4">
@@ -93,7 +94,8 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full px-3 py-2 border rounded"
-            required
+            required 
+            placeholder="usuario@exemplo.com"
           />
         </div>
         <div className="mb-6">
@@ -105,6 +107,7 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full px-3 py-2 border rounded"
+             placeholder="Uma senha forte"
           />
         </div>
         <button
