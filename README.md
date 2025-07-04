@@ -77,7 +77,6 @@ O projeto segue uma estrutura de monorepo, com o frontend e o backend em diretó
 |
 |-- prettierrc.js
 |-- .gitignore
-|-- package.json      # Scripts para rodar ambos os projetos
 |-- README.md
 ```
 
