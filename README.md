@@ -25,6 +25,7 @@ Este projeto foi criado com [Vite](https://vitejs.dev/), uma alternativa moderna
 
 ```bash
 npm create vite@latest
+```
 
 - **Framework/Biblioteca**: React 18+. 
 - **Roteamento**: React Router DOM para navegação entre páginas. 
@@ -121,7 +122,7 @@ Siga os passos abaixo para configurar e executar a aplicação em seu ambiente l
 3.  **Instale as dependências do frontend:**
 
     ```bash
-    cd ../client
+    cd client
     npm install
     ```
 
