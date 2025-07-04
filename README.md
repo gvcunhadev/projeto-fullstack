@@ -21,12 +21,31 @@ A aplicação foi construída com as seguintes tecnologias, conforme os requisit
 
 **Frontend (Client)**
 
+Este projeto foi criado com [Vite](https://vitejs.dev/), uma alternativa moderna ao Create React App, utilizando o seguinte comando:
+
+```bash
+npm create vite@latest
+
 - **Framework/Biblioteca**: React 18+. 
 - **Roteamento**: React Router DOM para navegação entre páginas. 
 - **Gerenciamento de Estado**: React Context API foi utilizado para gerenciar o estado de autenticação. A escolha se justifica pela simplicidade e adequação ao escopo do projeto, que não demanda a complexidade de uma biblioteca como Redux. 
 - **Requisições HTTP**: O `authService.js` abstrai as chamadas à API, utilizando o `fetch` nativo do navegador.
 - **UI/Estilização**: Tailwind CSS para a construção da interface de usuário, permitindo um desenvolvimento ágil e responsivo. 
-- **Qualidade de Código**: ESLint e Prettier. 
+- **Qualidade de Código**: ESLint e Prettier.
+- **Gerenciamento de autenticação
+Este projeto utiliza **React Context API** para gerenciar o estado de autenticação do usuário.
+
+**Por que React Context API?**
+
+- Simples e nativo do React, sem necessidade de bibliotecas externas.
+- Ideal para casos em que o estado global é limitado (ex.: apenas autenticação).
+- Permite expor dados e métodos de forma centralizada via `AuthProvider` e `useAuth()`.
+- Facilita o controle da sessão do usuário com persistência no `localStorage`.
+
+**Principais responsabilidades do Context:**
+- Armazenar o usuário autenticado.
+- Realizar login e logout.
+- Sincronizar o estado de autenticação ao carregar a aplicação.
 
 ### 3\. Estrutura de Pastas
 
