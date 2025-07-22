@@ -11,8 +11,6 @@ const app = express();
 // Use a configuração CORS completa que já estava correta
 app.use(cors({
     origin: [
-        'http://localhost',       // Para o frontend quando rodando via Docker (na porta 80)
-        'http://localhost:3000',  // Se você testar o frontend em dev server (ex: Vite) diretamente na porta 3000
         'http://localhost:5173'   // Se você testar o frontend em dev server (Vite) diretamente na porta 5173
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

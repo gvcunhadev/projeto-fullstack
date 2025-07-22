@@ -1,0 +1,16 @@
+# .dockerignore
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependências e arquivos de build
+node_modules
+dist
+.env
+.DS_Store
+
+# Arquivos do Docker
+#Dockerfile
+#docker-compose.yml
